@@ -1,0 +1,76 @@
+version: '3.1'
+
+#x-common-variables: &common-variables
+#  MYSQL_DATABASE: books
+#  MYSQL_USER: MYSQL_USER
+#  MYSQL_PASSWORD: MYSQL_PASSWORD
+
+services:
+  mysql_db:
+    image: mysql
+    restart: always
+    cap_add:
+      - SYS_NICE
+    volumes:
+      - ./setup.sql:/docker-entrypoint-initdb.d/setup.sql
+    ports:
+      - 9906:3306
+    environment:
+ #     <<: *common-variables
+      MYSQL_ROOT_PASSWORD: MYSQL_ROOT_PASSWORD
+      MYSQL_HOST: localhost
+      MYSQL_DATABASE: books
+      MYSQL_USER: MYSQL_USER
+      MYSQL_PASSWORD: MYSQL_PASSWORD      
+
+  nginx:
+    depends_on:
+      - backend
+      - frontend
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./nginx
+    ports:
+      - 3050:80
+
+
+  backend:
+    build:
+      dockerfile: Dockerfile
+      context: ./backend
+    depends_on:
+      - mysql_db
+    volumes:
+      - /app/node_modules
+      - ./server:/app
+    environment:
+#      <<: *common-variables
+      MYSQL_HOST_IP: mysql_db
+      MYSQL_DATABASE: books
+      MYSQL_USER: MYSQL_USER
+      MYSQL_PASSWORD: MYSQL_PASSWORD
+
+
+  frontend:
+    stdin_open: true
+#    environment:
+#      - CHOKIDAR_USEPOLLING=true
+    build:
+      dockerfile: Dockerfile
+      context: ./frontend
+    volumes:
+      - /app/node_modules
+      - ./client:/app
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+
+  adminer:
+      image: adminer
+      restart: unless-stopped
+      ports:
+        - 8000:8080
+      depends_on:
+        - mysql_db
+      environment:
+        ADMINER_DEFAULT_SERVER: mysql_db
