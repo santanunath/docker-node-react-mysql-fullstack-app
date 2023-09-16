@@ -5,4 +5,5 @@ COPY package-lock.json ./
 #RUN  npm install --package-lock-only
 RUN  npm install
 COPY ./ ./
-CMD ["npm", "run", "start"]
+CMD ["npm", "start"]
+#CMD ["npm", "run", "start"]
