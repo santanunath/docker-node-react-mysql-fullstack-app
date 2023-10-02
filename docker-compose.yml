@@ -4,6 +4,13 @@ version: '3.1'
 #  MYSQL_DATABASE: books
 #  MYSQL_USER: MYSQL_USER
 #  MYSQL_PASSWORD: MYSQL_PASSWORD
+# -----
+# container1: mysql_db @port:3306
+# container2: nginx (proxy) @port:80
+# container3: backend (node,expressjs) @port:3001
+# container4: frontend (reactjs) @port:3000
+# container5: adminer @port:8080
+# ------
 
 services:
   mysql_db:
