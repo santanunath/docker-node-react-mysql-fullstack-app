@@ -15,6 +15,7 @@ To start interacting with the application, open `http://localhost:3050/` on a br
 
 Check out the step by step explained guide [here](https://www.section.io/engineering-education/build-and-dockerize-a-full-stack-react-app-with-nodejs-and-nginx/)
 
-https://www.section.io/engineering-education/build-and-dockerize-a-full-stack-react-app-with-nodejs-and-nginx/
+https://www.section.io/engineering-education/build-and-dockerize-a-full-stack-react-app-with-nodejs-and-nginx/ (not working)
+
 
 https://mentorcruise.com/blog/how-to-dockerize-a-react-app-and-deploy-it-easily/ 
