@@ -3,7 +3,10 @@ const mysql = require('mysql2');
 const cors = require('cors');
 const app = express();
 
-// Add mysql database connection
+
+// *****************
+// Add mysql DATABASE CONNECTIOn
+// *****************
 const db = mysql.createPool({
   host: 'mysql_db', // the host name MYSQL_DATABASE: node_mysql
   user: 'MYSQL_USER', // database user MYSQL_USER: MYSQL_USER
@@ -11,19 +14,33 @@ const db = mysql.createPool({
   database: 'books' // database name MYSQL_HOST_IP: mysql_db
 })
 
+
+// *********************
 // Enable cors security headers
+// *********************
 app.use(cors())
 
-// add an express method to parse the POST method
+
+// ***********************
+// add an express method 
+// to parse the POST method
+// ***********************
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 
-// home page
+
+// ****************
+// HOME PAGE
+// ****************
 app.get('/', (req, res) => {
   res.send('Hi There')
 });
 
-// get all of the books in the database
+
+// *****************
+// GET all of the books 
+// in the database
+// *****************
 app.get('/get', (req, res) => {
   const SelectQuery = " SELECT * FROM  tbl_books_reviews";
   db.query(SelectQuery, (err, result) => {
@@ -31,7 +48,11 @@ app.get('/get', (req, res) => {
   })
 })
 
-// add a book to the database
+
+// ****************
+// ADD a book 
+// to the database
+// ****************
 app.post("/insert", (req, res) => {
   const bookName = req.body.setBookName;
   const bookReview = req.body.setReview;
@@ -41,7 +62,11 @@ app.post("/insert", (req, res) => {
   })
 })
 
-// delete a book from the database
+
+// *****************
+// DELETE a book 
+// from the database
+// *****************
 app.delete("/delete/:bookId", (req, res) => {
   const bookId = req.params.bookId;
   const DeleteQuery = "DELETE FROM tbl_books_reviews WHERE id = ?";
@@ -50,7 +75,10 @@ app.delete("/delete/:bookId", (req, res) => {
   })
 })
 
-// update a book review
+
+// *********************
+// UPDATE a book review
+// *********************
 app.put("/update/:bookId", (req, res) => {
   const bookReview = req.body.reviewUpdate;
   const bookId = req.params.bookId;
@@ -59,5 +87,6 @@ app.put("/update/:bookId", (req, res) => {
     if (err) console.log(err)
   })
 })
+
 
 app.listen('3001', () => { })
