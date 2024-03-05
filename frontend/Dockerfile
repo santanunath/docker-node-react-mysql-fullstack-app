@@ -5,6 +5,10 @@
 # Container gets BUILD when 
 # docker-compose is run
 
+# 'npm install'.. installs all 
+# dependant apps mentioned in 
+# 'package.json' file
+
 FROM node:alpine
 WORKDIR /app
 COPY package.json ./
