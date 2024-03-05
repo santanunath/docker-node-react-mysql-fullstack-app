@@ -30,17 +30,7 @@ services:
       MYSQL_USER: MYSQL_USER
       MYSQL_PASSWORD: MYSQL_PASSWORD
 
-  nginx:
-    depends_on:
-      - backend
-      - frontend
-    restart: always
-    build:
-      dockerfile: Dockerfile
-      context: ./nginx
-    ports:
-      - 3050:80
-
+ 
 
   backend:
     build:
@@ -71,6 +61,23 @@ services:
       - ./frontend:/app
     environment:
       - CHOKIDAR_USEPOLLING=true
+
+
+
+
+ nginx:
+    depends_on:
+      - backend
+      - frontend
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./nginx
+    ports:
+      - 3050:80
+
+
+
 
   adminer:
       image: adminer
