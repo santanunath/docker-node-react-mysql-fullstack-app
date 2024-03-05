@@ -1,3 +1,8 @@
+# Rpi-Host and Container 
+# 2 separate computer.
+# Container gets BUILD when 
+# docker-compose is run
+
 FROM node:alpine
 WORKDIR /app
 COPY package.json ./
