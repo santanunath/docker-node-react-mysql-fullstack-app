@@ -1,5 +1,7 @@
-# Rpi-Host and Container 
-# 2 separate computer.
+# Consider Two separate machines
+# 1: container-machine (virtual)
+# 2: host-machine (physical), Rpi
+
 # Container gets BUILD when 
 # docker-compose is run
 
