@@ -1,5 +1,9 @@
 # Build-and-Dockerize-a-Full-stack-React-app-with-Node.js-MySQL-and-Nginx-for-reverse-proxy
 
+Step1:
+Clone this repo in your local computer
+
+
 Run `npm i` inside the frontend directory
 
 Run `npm i` inside the backend directory
