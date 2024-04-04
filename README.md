@@ -1,8 +1,8 @@
 # Build-and-Dockerize-a-Full-stack-React-app-with-Node.js-MySQL-and-Nginx-for-reverse-proxy
 
-Run `npm i` inside the client directory
+Run `npm i` inside the frontend directory
 
-Run `npm i` inside the server directory
+Run `npm i` inside the backend directory
 
 Run `docker-compose up --build` inside the mainn project directory
 
