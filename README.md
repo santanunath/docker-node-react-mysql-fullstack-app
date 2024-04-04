@@ -4,10 +4,10 @@ Step1:
 Clone this repo in your PC/laptop/vps
 
 Step2:
-Run `npm i` inside the frontend directory
+Run `npm i` inside the 'frontend' directory to install packages mentioned inside file package.json
 
 Step3:
-Run `npm i` inside the backend directory
+Run `npm i` inside the 'backend' directory to install packages mentioned inside file package.json
 
 Step4:
 Run `docker-compose up --build` inside the mainn project directory
