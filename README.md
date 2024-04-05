@@ -27,5 +27,10 @@ Check out the step by step explained guide [here](https://www.webscale.com/engin
 
 https://www.webscale.com/engineering-education/build-and-dockerize-a-full-stack-react-app-with-node-js-mysql-and-nginx/
 
+Source code in GitHub:
+
+https://github.com/mosesreigns/Build-and-Dockerize-a-Full-stack-React-app-with-Node.js-MySQL-and-Nginx-for-reverse-proxy
+
+
 (By: victor garcia)
 https://mentorcruise.com/blog/how-to-dockerize-a-react-app-and-deploy-it-easily/ 
