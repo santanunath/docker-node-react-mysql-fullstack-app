@@ -2,6 +2,9 @@
 # 1: container-machine (virtual)
 # 2: host-machine (physical), Rpi
 
+# Note: we are only copying the package*.json files first to install necessary packages.
+#  then we are again copying all files (u r a bit confused? it is done for caching)
+
 # Container gets BUILD when 
 # docker-compose is run
 
@@ -11,8 +14,7 @@
 
 FROM node:alpine
 WORKDIR /app
-COPY package.json ./
-COPY package-lock.json ./
+COPY package*.json ./
 #RUN  npm install --package-lock-only
 RUN  npm install
 COPY ./ ./
