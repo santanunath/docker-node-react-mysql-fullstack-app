@@ -25,5 +25,8 @@ Check out the step by step explained guide [here](https://www.section.io/enginee
 
 https://www.section.io/engineering-education/build-and-dockerize-a-full-stack-react-app-with-nodejs-and-nginx/ (not working)
 
+
+https://www.webscale.com/engineering-education/build-and-dockerize-a-full-stack-react-app-with-node-js-mysql-and-nginx/
+
 (By: victor garcia)
 https://mentorcruise.com/blog/how-to-dockerize-a-react-app-and-deploy-it-easily/ 
