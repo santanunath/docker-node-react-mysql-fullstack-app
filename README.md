@@ -25,10 +25,13 @@ Step5:
 > Access the Adminer using route    `http://host-ip:8000/`
 
 
-to login, use `mysql_db` as the server, username as `root` and password as `MYSQL_ROOT_PASSWORD`.
-
+to login, use
+server: `mysql_db`   
+username: `root`   
+password: `MYSQL_ROOT_PASSWORD`   
+    
 Step6:
-To start interacting with the application, open `http://localhost:80/` in a browser. Note: Nginx server is running @port80.
+> To start interacting with the application, open `http://localhost:80/` in a browser. Note: Nginx server is running @port80.
 
 Check out the step by step explained guide [here](https://www.webscale.com/engineering-education/build-and-dockerize-a-full-stack-react-app-with-nodejs-and-nginx/)
 
