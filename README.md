@@ -1,4 +1,4 @@
-# Build-and-Dockerize-a-Full-stack-React-app-with-Node.js-MySQL-and-Nginx-for-reverse-proxy
+## Build and Dockerize a FullStack React app with Nodejs, MySQL and Nginx (proxy server)
 
 Step1:
 Clone this repo in your PC/laptop/vps
