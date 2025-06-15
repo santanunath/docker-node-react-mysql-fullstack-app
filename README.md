@@ -5,10 +5,14 @@ Step1:
 $ git clone repo-url
 
 Step2:
-> Run `npm install` inside the 'frontend' directory. It installs packages mentioned under the heading 'dependencies' in file package.json
+> Run 
+$ `npm install`   
+inside the 'frontend' directory. It installs packages mentioned under the heading 'dependencies' in file package.json
 
 Step3:
-> Run `npm install` inside the 'backend' directory. It installs packages mentioned under the heading 'dependencies' in file package.json
+> Run   
+$ `npm install`   
+inside the 'backend' directory. It installs packages mentioned under the heading 'dependencies' in file package.json
 
 Step4:
 > Run `docker-compose up --build` inside the main project directory
