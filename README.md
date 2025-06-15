@@ -5,7 +5,7 @@ Step1:
 $ git clone repo-url
 
 Step2:
-> Run 
+> Run   
 $ `npm install`   
 inside the 'frontend' directory. It installs packages mentioned under the heading 'dependencies' in file package.json
 
