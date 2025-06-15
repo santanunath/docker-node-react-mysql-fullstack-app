@@ -26,7 +26,7 @@ Step5:
 
 
 to login, use    
-server: `mysql_db`   
+server: `mysql-db`   
 username: `root`   
 password: `MYSQL_ROOT_PASSWORD`   
     
