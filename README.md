@@ -22,7 +22,7 @@ $ `docker-compose up --build`
 inside the main project directory
 
 Step5:
-> Access the Adminer using route    `http://localhost:8000/`
+> Access the Adminer using route    `http://host-ip:8000/`
 
 
 to login, use `mysql_db` as the server, username as `root` and password as `MYSQL_ROOT_PASSWORD`.
