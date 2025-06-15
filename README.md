@@ -7,18 +7,22 @@ $ git clone repo-url
 Step2:
 > Run   
 $ `npm install`   
-inside the 'frontend' directory. It installs packages mentioned under the heading 'dependencies' in file package.json
+inside the 'frontend' directory.   
+It installs packages mentioned under the heading 'dependencies' in file package.json
 
 Step3:
 > Run   
 $ `npm install`   
-inside the 'backend' directory. It installs packages mentioned under the heading 'dependencies' in file package.json
+inside the 'backend' directory.   
+It installs packages mentioned under the heading 'dependencies' in file package.json
 
 Step4:
-> Run `docker-compose up --build` inside the main project directory
+> Run   
+$ `docker-compose up --build`   
+inside the main project directory
 
 Step5:
-> Access the Adminer using route `http://localhost:8000/`
+> Access the Adminer using route    `http://localhost:8000/`
 
 
 to login, use `mysql_db` as the server, username as `root` and password as `MYSQL_ROOT_PASSWORD`.
