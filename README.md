@@ -25,7 +25,7 @@ Step5:
 > Access the Adminer using route    `http://host-ip:8000/`
 
 
-to login, use
+to login, use    
 server: `mysql_db`   
 username: `root`   
 password: `MYSQL_ROOT_PASSWORD`   
