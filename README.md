@@ -31,9 +31,9 @@ username: `root`
 password: `MYSQL_ROOT_PASSWORD`   
     
 Step6:
-> To start interacting with the application, open    
+> To start interacting with the application, open in a browser     
 `http://localhost:80/`    
-in a browser. Note: Nginx server is running @port80.
+Note: Nginx server is running @port80.
 
 Check out the step by step explained guide [here](https://www.webscale.com/engineering-education/build-and-dockerize-a-full-stack-react-app-with-nodejs-and-nginx/)
 
