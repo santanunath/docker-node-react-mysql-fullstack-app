@@ -1,7 +1,8 @@
 ## Build and Dockerize a FullStack React app with Nodejs, MySQL and Nginx (proxy server)
 
 Step1:
-> Clone this repo in your PC/laptop/vps
+> Clone this repo in your PC/laptop/vps.
+$ git clone repo-url
 
 Step2:
 > Run `npm install` inside the 'frontend' directory. It installs packages mentioned under the heading 'dependencies' in file package.json
