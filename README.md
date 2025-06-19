@@ -17,9 +17,10 @@ $ `npm install`
 It installs packages mentioned under the heading 'dependencies' in file package.json
 
 Step4:
-> Run   
+inside the main project directory  
+Run   
 $ `docker-compose up --build`   
-inside the main project directory
+
 
 Step5:
 > Access the Adminer using route    `http://host-ip:8000/`
