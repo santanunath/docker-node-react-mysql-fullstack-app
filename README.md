@@ -5,15 +5,15 @@ Step1:
 $ git clone repo-url
 
 Step2:
-> Run   
+> inside the 'frontend' directory    
+Run   
 $ `npm install`   
-inside the 'frontend' directory.   
 It installs packages mentioned under the heading 'dependencies' in file package.json
 
 Step3:
-> Run   
+> inside the 'backend' directory.  
+Run   
 $ `npm install`   
-inside the 'backend' directory.   
 It installs packages mentioned under the heading 'dependencies' in file package.json
 
 Step4:
