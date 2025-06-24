@@ -5,7 +5,7 @@ version: '3.1'
 #  MYSQL_USER: MYSQL_USER
 #  MYSQL_PASSWORD: MYSQL_PASSWORD
 # -----
-# contnr1: mysql_db @port:3306
+# contnr1: db @port:3306
 # contnr2: backend (expressjs) @port:3001
 # contnr3: frontend (reactjs) @port:3000
 # contnr4: nginx (proxy) @port:80
@@ -13,9 +13,9 @@ version: '3.1'
 # ------
 
 services:
-  mysql-db:
+  db:
     image: mysql
-    container_name: mysql-db
+    container_name: db
     restart: always
     cap_add:
       - SYS_NICE
@@ -45,7 +45,7 @@ services:
       - ./backend:/app
     environment:
 #      <<: *common-variables
-      MYSQL_HOST_IP: mysql_db
+      MYSQL_HOST_IP: db
       MYSQL_DATABASE: books
       MYSQL_USER: MYSQL_USER
       MYSQL_PASSWORD: MYSQL_PASSWORD
@@ -91,9 +91,9 @@ services:
       ports:
         - 8000:8080
       depends_on:
-        - mysql-db
+        - db
       environment:
-        ADMINER_DEFAULT_SERVER: mysql-db
+        ADMINER_DEFAULT_SERVER: db
 
 
 
