@@ -25,6 +25,10 @@ class App extends Component
   }
 
   
+  // ************************
+  // this event handler is called 
+  // when u enter anything in the input box
+  // ***********************
   handleChange = (event) => {
     let nam = event.target.name;
     let val = event.target.value
