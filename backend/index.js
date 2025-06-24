@@ -7,6 +7,9 @@ const app = express();
 // *****************
 // Add MYSQL DATABASE CONNECTION
 // *****************
+// below values should be same as 
+// defined in file 'docker-compose.yml'
+// ****************
 const db = mysql.createPool({
   host: 'mysql_db', // the host name MYSQL_DATABASE: node_mysql
   user: 'MYSQL_USER', // database user MYSQL_USER: MYSQL_USER
@@ -32,6 +35,9 @@ app.use(express.urlencoded({ extended: true }));
 // ****************
 // HOME PAGE
 // ****************
+// http method: GET
+// API url: /
+// ****************
 app.get('/', (req, res) => {
   res.send('Hi There')
 });
@@ -40,6 +46,9 @@ app.get('/', (req, res) => {
 // *****************
 // GET all of the books 
 // in the database
+// *****************
+// http method: GET
+// API url: /get
 // *****************
 app.get('/get', (req, res) => {
   const SelectQuery = " SELECT * FROM  tbl_books_reviews";
@@ -52,6 +61,9 @@ app.get('/get', (req, res) => {
 // ****************
 // ADD a book 
 // to the database
+// ****************
+// http method: POST
+// API url: /insert
 // ****************
 app.post("/insert", (req, res) => {
   const bookName = req.body.setBookName;
@@ -67,6 +79,9 @@ app.post("/insert", (req, res) => {
 // DELETE a book 
 // from the database
 // *****************
+// http method: DELETE 
+// API url: /delete
+// *****************
 app.delete("/delete/:bookId", (req, res) => {
   const bookId = req.params.bookId;
   const DeleteQuery = "DELETE FROM tbl_books_reviews WHERE id = ?";
@@ -78,6 +93,9 @@ app.delete("/delete/:bookId", (req, res) => {
 
 // *********************
 // UPDATE a book review
+// *********************
+// http method: PUT
+// API url: /update
 // *********************
 app.put("/update/:bookId", (req, res) => {
   const bookReview = req.body.reviewUpdate;
