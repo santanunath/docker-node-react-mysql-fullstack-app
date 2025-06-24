@@ -37,7 +37,7 @@ class App extends Component
   }
 
   
-  /* GET record */
+  /* (API call) GET record */
   componentDidMount() 
   {
     axios.get("/api/get")
@@ -49,7 +49,7 @@ class App extends Component
   }
 
   
-  /* INSERT record */
+  /* (API call) INSERT record */
   submit = () => {
     axios.post('/api/insert', this.state)
       .then(() => { alert('success post') })
@@ -58,7 +58,7 @@ class App extends Component
   }
 
   
-  /* DELETE record */
+  /* (API call) DELETE record */
   delete = (id) => {
     if (confirm("Do you want to delete? ")) {
       axios.delete(`/api/delete/${id}`)
@@ -67,14 +67,14 @@ class App extends Component
   }
   
   
-  /* UPDATE record */
+  /* (API call) UPDATE record */
   edit = (id) => {
     axios.put(`/api/update/${id}`, this.state)
     document.location.reload();
   }
 
   
-  /* DISPLAY the recotd */
+  /* DISPLAY the record */
   render() {
 
     let card = this.state.fetchData.map((val, key) => {
@@ -114,4 +114,5 @@ class App extends Component
     );
   }
 }
+
 export default App;
