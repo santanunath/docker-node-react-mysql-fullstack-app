@@ -3,6 +3,12 @@
 
 > Note: here CLASS based components are used
 
+
+Frontend: reacts     
+Backend: nodejs + expressjs    
+Database: MySQL    
+      
+
 Step1:
 > Clone this repo in your PC/laptop/vps.   
 $ git clone repo-url
