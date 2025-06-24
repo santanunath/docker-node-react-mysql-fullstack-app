@@ -5,8 +5,12 @@ import './App.css';
 import axios from 'axios';
 import { Button, Container, Card, Row } from 'react-bootstrap'
 
-class App extends Component {
-  constructor(props) {
+
+class App extends Component 
+{
+  
+  constructor(props) 
+  {
     super(props)
       this.state = {
         setBookName: '',
@@ -16,6 +20,7 @@ class App extends Component {
       }
   }
 
+  
   handleChange = (event) => {
     let nam = event.target.name;
     let val = event.target.value
@@ -24,13 +29,17 @@ class App extends Component {
     })
   }
 
+  
   handleChange2 = (event) => {
     this.setState({
       reviewUpdate: event.target.value
     })
   }
 
-  componentDidMount() {
+  
+  /* GET record */
+  componentDidMount() 
+  {
     axios.get("/api/get")
       .then((response) => {
         this.setState({
@@ -39,6 +48,8 @@ class App extends Component {
       })
   }
 
+  
+  /* INSERT record */
   submit = () => {
     axios.post('/api/insert', this.state)
       .then(() => { alert('success post') })
@@ -46,17 +57,24 @@ class App extends Component {
     document.location.reload();
   }
 
+  
+  /* DELETE record */
   delete = (id) => {
     if (confirm("Do you want to delete? ")) {
       axios.delete(`/api/delete/${id}`)
       document.location.reload()
     }
   }
-
+  
+  
+  /* UPDATE record */
   edit = (id) => {
     axios.put(`/api/update/${id}`, this.state)
     document.location.reload();
   }
+
+  
+  /* DISPLAY the recotd */
   render() {
 
     let card = this.state.fetchData.map((val, key) => {
