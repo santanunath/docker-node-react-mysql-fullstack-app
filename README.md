@@ -23,7 +23,7 @@ $ `docker-compose up --build`
 
 
 Step5:
-> Access the Adminer using route    `http://host-ip:8000/`
+> Access the ADMINER using route    `http://host-ip:8000/`
 
 
 to login, use    
