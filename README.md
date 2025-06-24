@@ -26,11 +26,14 @@ Step5:
 > Access the ADMINER using route    `http://host-ip:8000/`
 
 
-to login, use    
-server: `mysql-db`   
-username: `root`   
-password: `MYSQL_ROOT_PASSWORD`   
-    
+to login ADMINER, use    
+server: db   
+username: root   
+password: MYSQL_ROOT_PASSWORD    
+
+setup.sql is executed automatically to create the db-table.      
+        
+      
 Step6:
 > To start interacting with the application, open in a browser     
 `http://localhost:80/`    
