@@ -7,7 +7,7 @@
 Frontend: reacts     
 Backend: nodejs + expressjs    
 Database: MySQL    
-      
+Proxy Server: Nginx      
 
 Step1:
 > Clone this repo in your PC/laptop/vps.   
