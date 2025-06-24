@@ -9,7 +9,7 @@ Backend: nodejs + expressjs
 Database: MySQL    
 Proxy Server: Nginx      
     
-for backend, index.js is the main file    
+for backend, index.js is the main file. (port:3001 defined here)   
 for frontend, /src/App.js is the main file    
      
 Step1:
