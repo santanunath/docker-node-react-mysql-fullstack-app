@@ -8,9 +8,11 @@ import { Button, Container, Card, Row } from 'react-bootstrap'
 
 class App extends Component 
 {
+  // ***********************
   // CONSTRUCTOR - it is a function 
   // which is automatically executed when object is created 
   // u can pass some parameters while creating the object
+  // ***********************
   constructor(props) 
   {
     super(props)
@@ -39,10 +41,10 @@ class App extends Component
   }
 
   
-  // ----------------
+  // *****************
   // (API call) 
   // GET record 
-  // ----------------
+  // *****************
   componentDidMount() 
   {
     axios.get("/api/get")
@@ -54,10 +56,10 @@ class App extends Component
   }
 
 
-  // ----------------
+  // *****************
   // (API call) 
   // INSERT record 
-  // ----------------
+  // *****************
   submit = () => {
     axios.post('/api/insert', this.state)
       .then(() => { alert('success post') })
@@ -66,10 +68,10 @@ class App extends Component
   }
 
   
-  // -----------------
+  // *****************
   // (API call) 
   // DELETE record 
-  // -----------------
+  // *****************
   delete = (id) => {
     if (confirm("Do you want to delete? ")) {
       axios.delete(`/api/delete/${id}`)
@@ -78,20 +80,20 @@ class App extends Component
   }
 
   
-  // ------------------
+  // *****************
   // (API call) 
   // UPDATE record
-  // ------------------
+  // *****************
   edit = (id) => {
     axios.put(`/api/update/${id}`, this.state)
     document.location.reload();
   }
 
   
-  // ------------------
+  // *****************
   // DISPLAY 
   // the data 
-  // ------------------
+  // *****************
   render() {
 
     let card = this.state.fetchData.map((val, key) => {
