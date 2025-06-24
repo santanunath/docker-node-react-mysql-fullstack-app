@@ -8,7 +8,9 @@ import { Button, Container, Card, Row } from 'react-bootstrap'
 
 class App extends Component 
 {
-  
+  /* CONSTRUCTOR - it is a function */
+  /* which is automatically executed when object is created */
+  /* u can pass some parameters while creating the object*/
   constructor(props) 
   {
     super(props)
