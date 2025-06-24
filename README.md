@@ -1,5 +1,8 @@
 ## Build and Dockerize a FullStack React app with Nodejs, MySQL and Nginx (proxy server)
 
+
+> Note: here CLASS based components are used
+
 Step1:
 > Clone this repo in your PC/laptop/vps.   
 $ git clone repo-url
