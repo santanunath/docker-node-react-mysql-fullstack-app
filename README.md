@@ -10,7 +10,7 @@ Database: MySQL
 Proxy Server: Nginx      
     
 for backend, index.js is the main file    
-for frontend, App.js is the main file    
+for frontend, /src/App.js is the main file    
      
 Step1:
 > Clone this repo in your PC/laptop/vps.   
