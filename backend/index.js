@@ -5,7 +5,7 @@ const app = express();
 
 
 // *****************
-// Add mysql DATABASE CONNECTIOn
+// Add MYSQL DATABASE CONNECTION
 // *****************
 const db = mysql.createPool({
   host: 'mysql_db', // the host name MYSQL_DATABASE: node_mysql
