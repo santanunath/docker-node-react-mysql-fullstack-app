@@ -5,7 +5,7 @@ version: '3.1'
 #  MYSQL_USER: MYSQL_USER
 #  MYSQL_PASSWORD: MYSQL_PASSWORD
 # -----
-# contnr1: db @port:3306
+# contnr1: db (mysql) @port:3306
 # contnr2: backend (expressjs) @port:3001
 # contnr3: frontend (reactjs) @port:3000
 # contnr4: nginx (proxy) @port:80
