@@ -8,15 +8,16 @@ const app = express();
 // Add MYSQL DATABASE CONNECTION
 // *****************
 // below values should be same as 
-// environment variables for backend
+// environment variables for 'backend'
 // defined in file 'docker-compose.yml'
 // ****************
-const db = mysql.createPool({
-  host: 'mysql_db', // the host name MYSQL_DATABASE: node_mysql
-  user: 'MYSQL_USER', // database user MYSQL_USER: MYSQL_USER
-  password: 'MYSQL_PASSWORD', // database user password MYSQL_PASSWORD: MYSQL_PASSWORD
-  database: 'books' // database name MYSQL_HOST_IP: mysql_db
-})
+const db = mysql.createPool(
+  {
+    host: 'db', 
+    user: 'MYSQL_USER', 
+    password: 'MYSQL_PASSWORD', 
+    database: 'books'
+ })
 
 
 // *********************
