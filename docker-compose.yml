@@ -86,13 +86,13 @@ services:
 
 
   adminer:
-      image: adminer
-      container_name: adminer
-      restart: unless-stopped
-      ports:
-        - 8000:8080
-      depends_on:
-        - db
+    image: adminer
+    container_name: adminer
+    restart: unless-stopped
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
     #  environment:
     #    ADMINER_DEFAULT_SERVER: db
 
