@@ -71,8 +71,7 @@ services:
 
 
 
-
- nginx-proxy:
+  nginx-proxy:
     container_name: nginx-proxy
     depends_on:
       - backend
