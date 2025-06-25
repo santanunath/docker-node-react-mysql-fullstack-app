@@ -38,7 +38,7 @@ services:
       dockerfile: Dockerfile
       context: ./backend
     depends_on:
-      - mysql-db
+      - db
     volumes:
       - /app/node_modules
       - ./backend:/app
