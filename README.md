@@ -32,10 +32,13 @@ Step4:
 inside the main project directory  
 Run   
 $ `docker-compose up --build`   
-
+$ sudo docker-compose up -d
 
 Step5:
 > Access the ADMINER using route    `http://host-ip:8000/`
+> warning!! wait for 5minutes to setup MySQL database
+> use below command to check the MySQL running status
+> $ sudo docker logs db
 
 
 to login ADMINER, use    
