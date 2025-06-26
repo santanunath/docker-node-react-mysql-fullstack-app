@@ -63,6 +63,8 @@ services:
       context: ./frontend
     depends_on:
       - backend
+    ports:
+      - 3000:3000
     volumes:
       - /app/node_modules
       - ./frontend:/app
