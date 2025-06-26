@@ -36,9 +36,10 @@ $ sudo docker-compose up -d
 
 Step5:
 > Access the ADMINER using route    `http://host-ip:8000/`   
-> warning!! before using Adminer wait for 5minutes to setup MySQL database    
-> use below command to check the MySQL running status   
-> $ sudo docker logs db 
+> warning!! before using Adminer wait for few minutes to setup MySQL properly.        
+> use below command to check if MySQL is ready for connection..    
+> $ sudo docker logs db
+> it should display "MySQL: ready for connection"  
 
 
 to login ADMINER, use    
