@@ -19,7 +19,6 @@ $ git clone repo-url
 Step2:
 > inside the 'frontend' directory    
 Run   
-$ cd frontend   
 $ `npm install`   
 It installs packages mentioned under the heading 'dependencies' in file package.json
 
